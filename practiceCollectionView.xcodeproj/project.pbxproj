@@ -15,6 +15,8 @@
 		242AC731262FEC2300C60F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242AC72F262FEC2300C60F90 /* LaunchScreen.storyboard */; };
 		242AC73C262FEC2300C60F90 /* practiceCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AC73B262FEC2300C60F90 /* practiceCollectionViewTests.swift */; };
 		242AC747262FEC2300C60F90 /* practiceCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AC746262FEC2300C60F90 /* practiceCollectionViewUITests.swift */; };
+		242AC758262FF9E500C60F90 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242AC757262FF9E500C60F90 /* CollectionViewCell.xib */; };
+		242AC75D262FFA1F00C60F90 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AC75C262FFA1F00C60F90 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		242AC742262FEC2300C60F90 /* practiceCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = practiceCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242AC746262FEC2300C60F90 /* practiceCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practiceCollectionViewUITests.swift; sourceTree = "<group>"; };
 		242AC748262FEC2300C60F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		242AC757262FF9E500C60F90 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		242AC75C262FFA1F00C60F90 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				242AC72D262FEC2300C60F90 /* Assets.xcassets */,
 				242AC72F262FEC2300C60F90 /* LaunchScreen.storyboard */,
 				242AC732262FEC2300C60F90 /* Info.plist */,
+				242AC757262FF9E500C60F90 /* CollectionViewCell.xib */,
+				242AC75C262FFA1F00C60F90 /* CollectionViewCell.swift */,
 			);
 			path = practiceCollectionView;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			files = (
 				242AC731262FEC2300C60F90 /* LaunchScreen.storyboard in Resources */,
 				242AC72E262FEC2300C60F90 /* Assets.xcassets in Resources */,
+				242AC758262FF9E500C60F90 /* CollectionViewCell.xib in Resources */,
 				242AC72C262FEC2100C60F90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			files = (
 				242AC729262FEC2100C60F90 /* ViewController.swift in Sources */,
 				242AC725262FEC2100C60F90 /* AppDelegate.swift in Sources */,
+				242AC75D262FFA1F00C60F90 /* CollectionViewCell.swift in Sources */,
 				242AC727262FEC2100C60F90 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
