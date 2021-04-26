@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dXf-BN-ENp">
-                                <rect key="frame" x="0.0" y="157" width="414" height="184"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dXf-BN-ENp">
+                                <rect key="frame" x="0.0" y="154" width="414" height="78"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aV2-Ie-ef5">
                                     <size key="itemSize" width="128" height="128"/>
@@ -28,8 +27,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ6-f7-mSQ">
-                                <rect key="frame" x="175" y="432" width="64" height="32.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択されていません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ6-f7-mSQ">
+                                <rect key="frame" x="84" y="432" width="246.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,8 +37,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LZ6-f7-mSQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GLX-A8-AL2"/>
-                            <constraint firstItem="LZ6-f7-mSQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNd-H2-zv1"/>
+                            <constraint firstItem="dXf-BN-ENp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5fo-tF-vDo"/>
+                            <constraint firstItem="LZ6-f7-mSQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5lt-h4-qjU"/>
+                            <constraint firstItem="dXf-BN-ENp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="Ktd-zi-m5C"/>
+                            <constraint firstItem="LZ6-f7-mSQ" firstAttribute="top" secondItem="dXf-BN-ENp" secondAttribute="bottom" constant="200" id="MiN-PK-i5l"/>
+                            <constraint firstItem="dXf-BN-ENp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SW7-9Y-viA"/>
+                            <constraint firstItem="LZ6-f7-mSQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wrf-Df-Bfk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -49,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101.44927536231884" y="42.857142857142854"/>
+            <point key="canvasLocation" x="18.840579710144929" y="42.857142857142854"/>
         </scene>
     </scenes>
     <resources>

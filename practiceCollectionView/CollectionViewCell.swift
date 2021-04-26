@@ -7,22 +7,31 @@
 
 import UIKit
 
+protocol CollectionViewCellDelegate: class {
+    func receiveButtonCurrentTitle(buttonTitel: String)
+    func changeButtonStatus(button: UIButton)
+}
+
 
 class CollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var collectionView: UIView!
     @IBOutlet weak var button: UIButton!
     
+    var collectionViewCellDelegate: CollectionViewCellDelegate?
+    
     static let identifier = "CollectionViewCell"
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-
-    public func configure(text: String) {
-        button.setTitle(text, for: .normal)
+ 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        guard let buttonTitle = sender.currentTitle else { return }
+        collectionViewCellDelegate?.receiveButtonCurrentTitle(buttonTitel: buttonTitle)
+        collectionViewCellDelegate?.changeButtonStatus(button: sender)
+        
     }
     
     static func nib() -> UINib {
