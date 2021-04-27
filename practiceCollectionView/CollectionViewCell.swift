@@ -7,35 +7,29 @@
 
 import UIKit
 
-protocol CollectionViewCellDelegate: class {
-    func receiveButtonCurrentTitle(buttonTitel: String)
-    func changeButtonStatus(button: UIButton)
-}
-
-
 class CollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var collectionView: UIView!
-    @IBOutlet weak var button: UIButton!
-    
-    var collectionViewCellDelegate: CollectionViewCellDelegate?
+    @IBOutlet weak var label: UILabel!
     
     static let identifier = "CollectionViewCell"
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
- 
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let buttonTitle = sender.currentTitle else { return }
-        collectionViewCellDelegate?.receiveButtonCurrentTitle(buttonTitel: buttonTitle)
-        collectionViewCellDelegate?.changeButtonStatus(button: sender)
-        
-    }
     
     static func nib() -> UINib {
         return UINib(nibName: "CollectionViewCell", bundle: nil)
     }
     
+    //cellの円の外側をタップしたときにcellが選択されないようにする
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let radius:CGFloat = (self.frame.width / 2)
+        var point:CGPoint = CGPoint()
+        
+        if let touch = touches.first {
+            point = touch.location(in: self.superview)
+        }
+        
+        let distance:CGFloat = sqrt(CGFloat(powf((Float(self.center.x - point.x)), 2) + powf((Float(self.center.y - point.y)), 2)))
+        
+        if(distance < radius) {
+            super.touchesBegan(touches, with: event)
+        }
+    }
 }

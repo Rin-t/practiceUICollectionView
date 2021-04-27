@@ -16,26 +16,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="101" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwk-B8-fCW" customClass="RoundButton" customModule="practiceCollectionView" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="101" height="99"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                        <state key="normal" title="title"/>
-                        <connections>
-                            <action selector="buttonTapped:" destination="Wck-Yk-xYB" eventType="touchUpInside" id="E66-Wf-rhM"/>
-                        </connections>
-                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi4-dG-ciz">
+                        <rect key="frame" x="29.5" y="39" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pwk-B8-fCW" firstAttribute="top" secondItem="NbK-mT-Koi" secondAttribute="top" id="3XK-Rq-VdY"/>
-                    <constraint firstAttribute="trailing" secondItem="pwk-B8-fCW" secondAttribute="trailing" id="RnF-po-nkI"/>
-                    <constraint firstAttribute="bottom" secondItem="pwk-B8-fCW" secondAttribute="bottom" id="fO1-Dt-FIH"/>
-                    <constraint firstItem="pwk-B8-fCW" firstAttribute="leading" secondItem="NbK-mT-Koi" secondAttribute="leading" id="yaj-cz-nO8"/>
+                    <constraint firstItem="hi4-dG-ciz" firstAttribute="centerX" secondItem="NbK-mT-Koi" secondAttribute="centerX" id="1DL-mA-MLH"/>
+                    <constraint firstItem="hi4-dG-ciz" firstAttribute="centerY" secondItem="NbK-mT-Koi" secondAttribute="centerY" id="huf-OQ-X2L"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="101" height="99"/>
             <connections>
-                <outlet property="button" destination="pwk-B8-fCW" id="jUn-Cu-2kn"/>
                 <outlet property="collectionView" destination="NbK-mT-Koi" id="IBd-Pm-c4s"/>
+                <outlet property="label" destination="hi4-dG-ciz" id="ENe-v4-iCA"/>
             </connections>
             <point key="canvasLocation" x="23.913043478260871" y="53.236607142857139"/>
         </collectionViewCell>

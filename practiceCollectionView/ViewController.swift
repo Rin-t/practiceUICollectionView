@@ -41,19 +41,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        cell.collectionViewCellDelegate = self
-        cell.button.setTitle(collectionCell[indexPath.row], for: .normal)
+
         //cellの形
         cell.layoutIfNeeded()
         cell.layer.cornerRadius = (cell.collectionView.frame.size.height - 5) / 2
         cell.backgroundColor = .systemYellow
-     
-        //cell内buttonの形
-        cell.button.tintColor = .white
-        cell.button.backgroundColor = .clear
-        cell.button.layer.borderWidth = 1
-        cell.button.layer.borderColor = UIColor.black.cgColor
-        cell.button.layer.cornerRadius = (cell.collectionView.frame.size.height - 5) / 2
+        cell.label.text = collectionCell[indexPath.row]
         
         let selectedBGView = UIView(frame: cell.frame)
         selectedBGView.backgroundColor = .white
@@ -62,12 +55,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         textLabel.text = collectionCell[indexPath.row]
     }
-    
     
     private func cellLayout(cell: CollectionViewCell) -> CollectionViewCell {
 
@@ -76,32 +66,3 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
 }
 
-extension ViewController: CollectionViewCellDelegate {
-    func changeButtonStatus(button: UIButton) {
-//        button.layer.borderColor = UIColor.systemYellow.cgColor
-//        button.tintColor = .systemYellow
-//        button.backgroundColor = .white
-    }
-    
-    func receiveButtonCurrentTitle(buttonTitel: String) {
-        textLabel.text = buttonTitel
-    }
-    
-}
-
-class RoundButton: UIButton {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           let radius:CGFloat = (self.frame.width / 2)
-           var point:CGPoint = CGPoint()
-
-           if let touch = touches.first {
-               point = touch.location(in: self.superview)
-           }
-
-           let distance:CGFloat = sqrt(CGFloat(powf((Float(self.center.x - point.x)), 2) + powf((Float(self.center.y - point.y)), 2)))
-
-           if(distance < radius) {
-               super.touchesBegan(touches, with: event)
-           }
-       }
-}
